@@ -45,6 +45,23 @@ def minimumBribes(q):
             else:
                 return 'Too chaotic'
     return bribes
+'''
+# bubble sort method
+def minimumBribes(q):
+    # Write your code here
+    bribes = 0
+    q_sorted = sorted(q)
+    while q != q_sorted:
+        for i in range(len(q)-1):
+            if q[i] - (i + 1) >2:
+                return 'Too chaotic'
+            if q[i] > q[i+1]:
+                q[i], q[i+1] = q[i+1], q[i]
+                bribes += 1
+                
+    return bribes
+'''
+
 
 if __name__ == '__main__':
     # t = int(input().strip())
